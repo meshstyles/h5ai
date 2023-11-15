@@ -6,9 +6,6 @@
     Online hash generator: http://md5hashing.net/hashing/sha512
     */
     "passhash": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
-
-
-
     /*
     Resources.
 
@@ -22,12 +19,10 @@
     "resources": {
         "scripts": [],
         "styles": [
-            "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700"
+            // include this if you do not use the standard theme
+            // "pdfjs.css"
         ]
     },
-
-
-
     /*
     General view options.
 
@@ -63,26 +58,55 @@
         "disableSidebar": false,
         "fallbackMode": false,
         "fastBrowsing": true,
-        "fonts": ["Ubuntu", "Roboto", "Helvetica", "Arial", "sans-serif"],
-        "fontsMono": ["Ubuntu Mono", "Monaco", "Lucida Sans Typewriter", "monospace"],
-        "hidden": ["^\\.", "^_h5ai"],
+        "fonts": [
+            "Ubuntu",
+            "Roboto",
+            "Helvetica",
+            "Arial",
+            "sans-serif"
+        ],
+        "fontsMono": [
+            "Ubuntu Mono",
+            "Monaco",
+            "Lucida Sans Typewriter",
+            "monospace"
+        ],
+        "hidden": [
+            "^\\.",
+            "^_h5ai"
+        ],
         "hideFolders": false,
         "hideIf403": true,
         "hideParentFolder": false,
         "maxIconSize": 40,
-        "modes": ["details", "grid", "icons"],
+        "modes": [
+            "details",
+            "grid",
+            "icons"
+        ],
         "modeToggle": false,
         "setParentFolderLabels": true,
-        "sizes": [20, 40, 60, 80, 100, 140, 180, 220, 260, 300],
+        "sizes": [
+            20,
+            40,
+            60,
+            80,
+            100,
+            140,
+            180,
+            220,
+            260,
+            300
+        ],
         "theme": "comity",
-        "unmanaged": ["index.html", "index.htm", "index.php"],
+        "unmanaged": [
+            "index.html",
+            "index.htm",
+            "index.php"
+        ],
         "unmanagedInNewWindow": false
     },
-
-
-
     /*** Extensions (in alphabetical order) ***/
-
     /*
     Watch and update current folder content.
 
@@ -92,14 +116,12 @@
         "enabled": false,
         "interval": 5000
     },
-
     /*
     Show a clickable breadcrumb.
     */
     "crumb": {
         "enabled": true
     },
-
     /*
     Allow customized header and footer files.
     First checks for files "_h5ai.header.html" and "_h5ai.footer.html" in the current directory.
@@ -117,7 +139,6 @@
         "enabled": true,
         "stopSearchingAtRoot": true
     },
-
     /*
     Enable packaged download of selected entries.
     To select files the "select"-extension needs to be enabled.
@@ -132,7 +153,6 @@
         "packageName": null,
         "alwaysVisible": false
     },
-
     /*
     Allow filtering the displayed files and folders in current folder.
     Checks for substrings.
@@ -152,7 +172,6 @@
         "debounceTime": 100,
         "ignorecase": true
     },
-
     /*
     Calc the size of folders.
     This operation is real slow. The calculated sizes differ slightly for both
@@ -165,7 +184,6 @@
         "enabled": true,
         "type": "php"
     },
-
     /*
     Adds Google Universial Analytics asynchronous tracking code.
     see: https://developers.google.com/analytics/devguides/collection/analyticsjs/
@@ -176,7 +194,6 @@
         "enabled": false,
         "id": "UA-000000-0"
     },
-
     /*
     Enable a generic info side bar.
 
@@ -191,7 +208,6 @@
         "qrFill": "#999",
         "qrBack": "#fff"
     },
-
     /*
     Localization, for example "en", "de" etc. - see "_h5ai/conf/l10n" folder for
     possible values. Adjust it to your needs. If lang is not found
@@ -205,7 +221,6 @@
         "lang": "en",
         "useBrowserLang": true
     },
-
     /*
     Adds Piwik tracker javascript code.
 
@@ -217,7 +232,6 @@
         "baseURL": "some/url",
         "idSite": 1
     },
-
     /*
     Play a audio preview on click.
 
@@ -227,9 +241,10 @@
     "preview-aud": {
         "enabled": true,
         "autoplay": true,
-        "types": ["aud"]
+        "types": [
+            "aud"
+        ]
     },
-
     /*
     Show an image preview on click.
 
@@ -239,9 +254,17 @@
     "preview-img": {
         "enabled": true,
         "size": false,
-        "types": ["img", "img-bmp", "img-gif", "img-ico", "img-jpg", "img-png", "img-raw", "img-svg"]
+        "types": [
+            "img",
+            "img-bmp",
+            "img-gif",
+            "img-ico",
+            "img-jpg",
+            "img-png",
+            "img-raw",
+            "img-svg"
+        ]
     },
-
     /*
     Show text file preview on click.
 
@@ -282,7 +305,20 @@
             "txt-xml": 1
         }
     },
-
+    /*
+    Preview for PDF Documents
+    - pdfjsPath:Path to pdf release folder (incl. /web/viewer /web/build)
+                Please not that this will need to be hosted locally.
+                Web/Viewer will be appended somewhere else. Also please consider hosting it locally.
+    - types: array of strings
+    */
+    "preview-doc": {
+        "enabled": false,
+        "pdfjsPath": "/pdfjs",
+        "types": [
+            "x-pdf"
+        ]
+    },
     /*
     Play a video preview on click.
 
@@ -292,9 +328,16 @@
     "preview-vid": {
         "enabled": true,
         "autoplay": true,
-        "types": ["vid-avi", "vid-flv", "vid-mkv", "vid-mov", "vid-mp4", "vid-mpg", "vid-webm"]
+        "types": [
+            "vid-avi",
+            "vid-flv",
+            "vid-mkv",
+            "vid-mov",
+            "vid-mp4",
+            "vid-mpg",
+            "vid-webm"
+        ]
     },
-
     /*
     Allow searching files and folders in and below current folder.
     Checks for substrings.
@@ -314,7 +357,6 @@
         "debounceTime": 300,
         "ignorecase": true
     },
-
     /*
     Make entries selectable.
     At the moment only needed for packaged download.
@@ -327,7 +369,6 @@
         "clickndrag": true,
         "checkboxes": true
     },
-
     /*
     Default sort order.
     "column" and "reverse" are locally stored.
@@ -346,7 +387,6 @@
         "natural": true,
         "folders": 0
     },
-
     /*
     Show thumbnails for image files. Needs the "/_h5ai/public/cache" folder to be
     writable for the web Server.
@@ -361,22 +401,37 @@
     */
     "thumbnails": {
         "enabled": true,
-        "img": ["img-bmp", "img-gif", "img-ico", "img-jpg", "img-png"],
-        "mov": ["vid-avi", "vid-flv", "vid-mkv", "vid-mov", "vid-mp4", "vid-mpg", "vid-webm"],
-        "doc": ["x-pdf", "x-ps"],
+        "img": [
+            "img-bmp",
+            "img-gif",
+            "img-ico",
+            "img-jpg",
+            "img-png"
+        ],
+        "mov": [
+            "vid-avi",
+            "vid-flv",
+            "vid-mkv",
+            "vid-mov",
+            "vid-mp4",
+            "vid-mpg",
+            "vid-webm"
+        ],
+        "doc": [
+            "x-pdf",
+            "x-ps"
+        ],
         "delay": 1,
         "size": 240,
         "exif": false,
         "chunksize": 20
     },
-
     /*
     Replace window title with current breadcrumb.
     */
     "title": {
         "enabled": true
     },
-
     /*
     Show a folder tree.
     Note that this might affect performance significantly.
